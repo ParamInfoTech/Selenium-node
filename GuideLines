@@ -1,0 +1,8 @@
+npm install selenium-webdriver
+
+download driver from url:
+firefox: https://github.com/mozilla/geckodriver/releases/
+chrome: https://chromedriver.chromium.org/downloads
+and unzip it in the folder containing .js file
+
+
