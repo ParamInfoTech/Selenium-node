@@ -31,5 +31,3 @@ driver.findElements(By.css("nav li")).then(function (elements) {
       });
    });
 });
-//driver.sleep(1000);
-//driver.quit(); 
