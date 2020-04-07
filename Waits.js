@@ -5,9 +5,17 @@ let until = webDriver.until;
 let driver = new webDriver.Builder().forBrowser("chrome").build();
 driver.get("https://library-app.firebaseapp.com/");
 
-console.log();
 driver.findElement(By.css("input")).sendKeys("abc.753@gmail.com");
-driver.findElement(By.css(".btn-lg")).click();
+let submitBtn = driver.findElement(By.css(".btn-lg"))
+
+driver.wait(function(){
+    return submitBtn.isEnabled();
+}, 10000).then(function(val){
+    console.log(val);
+})
+
+submitBtn.click();
+
 console.log(1);
 driver.wait(until.elementLocated(By.css(".alert-success")), 10000).then(function(elem){
     console.log(2);
